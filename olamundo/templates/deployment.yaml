@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: olamundoapi
+  name: {{ .Values.appName }}
   namespace: default
   labels:
-    app: olamundoapi
+    app: {{ .Values.appName }}
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: olamundoapi
+      app: {{ .Values.appName }}
       tier: frontend
   template:
     metadata:
       labels:
-        app: olamundoapi
+        app: {{ .Values.appName }}
         tier: frontend
     spec: # Pod spec
       containers:
