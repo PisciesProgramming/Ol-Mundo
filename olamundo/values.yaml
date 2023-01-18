@@ -6,3 +6,6 @@ configmap:
   name: helmappconfigmapv1.1
   data:
     CUSTOM_HEADER: "Deploy com HELM!"
+
+image: 
+  name: asdkant/fastapi-hello-world
