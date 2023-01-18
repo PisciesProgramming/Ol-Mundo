@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: olamundoapi
+  namespace: default
+  labels:
+    app: olamundoapi
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    name: fastapi
+  selector:
+    app: olamundoapi
+    tier: frontend
+  type: NodePort
