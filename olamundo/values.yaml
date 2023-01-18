@@ -1,1 +1,8 @@
 appName: fastapi-olamundo
+
+namespace: default
+
+configmap:
+  name: helmappconfigmapv1.1
+  data:
+    CUSTOM_HEADER: "Deploy com HELM!"
